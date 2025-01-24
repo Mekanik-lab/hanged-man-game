@@ -1,0 +1,3 @@
+# HANGED MAN GAME
+
+This is just HANGED MAN GAME.
