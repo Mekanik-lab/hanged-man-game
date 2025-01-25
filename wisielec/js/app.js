@@ -176,7 +176,7 @@ const init = () => {
     const faqBtn = document.getElementById("faqBtn");
     faqBtn.addEventListener("click", () => {
         alert("Kategorie haseł: kraje, zwierzęta, pojazdy, waluty. GL HF :)");
-    })
+    });
 }
 
 window.onload = init;
