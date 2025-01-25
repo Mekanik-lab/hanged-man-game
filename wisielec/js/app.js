@@ -113,7 +113,8 @@ function checkPassword(letter) {
     const button = Array.from(document.querySelectorAll(".letters")).find(button => button.textContent.toUpperCase() === letter);
     button.disabled = true;
     button.style.cursor = "default";
-    button.classList.remove("active");
+    button.style.transition = "none";
+    button.style.transform = "none";
 
     if (correctGuess) {
         button.style.backgroundColor = "green";
@@ -153,7 +154,8 @@ function resetGame() {
         button.style.backgroundColor = "";
         button.style.borderColor = "";
         button.style.cursor = "pointer";
-        button.classList.add("active");
+        button.style.transition = "transform 0.3s ease";  
+        button.style.transform = "";
     });
 
     init();
