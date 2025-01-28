@@ -108,7 +108,6 @@ const passwords = [
     "BORDOWY"
 ];
 
-
 let wrongGuesses = 0;
 
 function pickRandomPassword() {
@@ -176,6 +175,7 @@ function checkPassword(letter) {
 
     if (wrongGuesses >= 12) {
         alert("Przegrałeś! Hasło to: " + passwordToGuess);
+        document.getElementById("passwordHeader").textContent = passwordToGuess;
         setTimeout(resetGame, 2000);
     }
 }
@@ -216,5 +216,4 @@ const init = () => {
         button.addEventListener("click", getLetter);
     });
 }
-
 window.onload = init;
