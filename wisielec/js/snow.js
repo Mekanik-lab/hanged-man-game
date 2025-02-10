@@ -28,6 +28,7 @@ function renderFlake(snowContainer) {
 
     const img = document.createElement('img');
     img.src = flakeImages[Math.floor(Math.random() * flakeImages.length)];
+    img.alt = "snow";
 
     flakeContainer.appendChild(img);
     snowContainer.appendChild(flakeContainer);
