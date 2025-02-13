@@ -172,7 +172,9 @@ function checkPassword(letter) {
         alert("Wygrałeś!");
         let winSound = new Audio("./audio/windows-meme.mp3");
         winSound.play();
-        setTimeout(resetGame, 9200);
+        winSound.addEventListener("ended", () => {
+            resetGame();
+        });
     }
 
     if (wrongGuesses >= 12) {
@@ -180,7 +182,9 @@ function checkPassword(letter) {
         document.getElementById("passwordHeader").textContent = passwordToGuess;
         let loseSound = new Audio("./audio/game-over.mp3");
         loseSound.play();
-        setTimeout(resetGame, 1500);
+        loseSound.addEventListener("ended", () => {
+            resetGame();
+        });
     }
 }
 
