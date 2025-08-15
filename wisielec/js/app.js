@@ -111,8 +111,7 @@ const passwords = [
 let wrongGuesses = 0;
 
 function pickRandomPassword() {
-    const randomPassword = passwords[Math.round(Math.random() * passwords.length)].toUpperCase();
-    return randomPassword;
+    return passwords[Math.round(Math.random() * passwords.length)].toUpperCase();
 }
 
 function passwordEncryption(randomPassword) {
@@ -225,3 +224,4 @@ const init = () => {
     });
 }
 window.onload = init;
+
